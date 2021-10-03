@@ -1,7 +1,12 @@
+header,
+footer {
+    z-index: 1;
+}
+
 .under-construction {
     background-image: url(https://giffiles.alphacoders.com/158/158668.gif);
     background-position: center;
-    background-repeat: initial;
+    background-repeat: repeat-x;
     height: 100vh;
     object-fit: cover;
 }
@@ -10,7 +15,7 @@
     border-top: 1px solid var(--color-destaque3);
     background-image: url(https://giffiles.alphacoders.com/158/158668.gif);
     background-position: center;
-    background-repeat: initial;
+    background-repeat: repeat-x;
     height: 20vh;
     object-fit: cover;
 }
