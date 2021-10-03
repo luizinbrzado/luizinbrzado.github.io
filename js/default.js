@@ -1,10 +1,14 @@
 // +HEADER
 
+let header = document.querySelector('header');
+
+
 
 // /+HEADER
 
 
 // +FOOTER
+
 let footer = document.querySelector('footer');
 
 function footerNoDom() {
