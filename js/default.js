@@ -4,23 +4,58 @@ let header = document.querySelector('header');
 
 function headerNoDOM() {
     let headerHTML =
-        `<div class="header-content">
-            <div class="logo">
-                <a href="/" data-path="/">
-                    <img src="./img/logo.png" alt="">
-                </a>
-            </div>
-            <div class="main-nav">
-                <a href="/projetos.html" data-path="/projetos.html">Projetos</a>
-                <a href="/sobre-mim.html" data-path="/sobre-mim.html">Sobre mim</a>
-                <a href="/contato.html" data-path="/contato.html">Contate-me</a>
-            </div>
-        </div>`
+        `<a href="/" data-path="/">
+            LuizIn<span>B</span><span>R</span>zado
+        </a>
+        <nav id="nav">
+            <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded='false'>
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="/projetos.html" data-path="/projetos.html">Projetos</a></li>
+                <li><a href="/sobre-mim.html" data-path="/sobre-mim.html">Sobre mim</a></li>
+                <li><a href="/contato.html" data-path="/contato.html">Contate-me</a></li>
+            </ul>
+        </nav>`
     
-        header.innerHTML = headerHTML;
+    header.id = 'header';
+    header.innerHTML = headerHTML;
 }
 
 headerNoDOM();
+
+const btnMobile = document.getElementById('btn-mobile');
+
+function toggleMenu(e) {
+    if (e.type === 'touchstart')
+        e.preventDefault();
+
+    const nav = document.getElementById('nav');
+    nav.classList.toggle('active')
+
+    const active = nav.classList.contains('active');
+
+    e.currentTarget.setAttribute('aria-expanded', active);
+
+    e.currentTarget.style.animation = 'menu 0.2s';
+    
+    setTimeout(() => {
+        btnMobile.style.animation = '';
+    }, 300);
+
+    if (active) {
+        e.currentTarget.setAttribute('aria-label', 'Fechar menu')
+        btnMobile.innerHTML = '<i class="fas fa-times fa-lg"></i>';
+    } else {
+        e.currentTarget.setAttribute('aria-label', 'Abrir menu')
+        btnMobile.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+    }
+}
+
+btnMobile.addEventListener('touchstart', toggleMenu)
+
+btnMobile.addEventListener('click', toggleMenu)
+
 // /+HEADER
 
 

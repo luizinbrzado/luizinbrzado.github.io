@@ -25,41 +25,64 @@ body {
 
 /* +HEADER */
 
-header {
+
+#logo {
+    width: 70px;
+}
+
+#header {
     position: absolute;
+    height: 90px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: space-evenly;
     top: 0;
     width: 100%;
-    padding: 1rem;
-    z-index: 1;
+    z-index: 2;
 }
 
-header .header-content {
+#header > a {
+    color: #5ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#header > a span:first-child {
+    color: #5f5;
+}
+
+#header > a span:last-child {
+    color: #ff5;
+}
+
+#btn-mobile {
+    display: none;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+#menu {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 1.5rem;
+    transition: 0.6s;
 }
 
-header .header-content .logo img {
-    width: 5rem;
-}
-
-header .header-content .main-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-header .header-content .main-nav a:link,
-header .header-content .main-nav a:visited,
-header .header-content .main-nav a:link:visited {
+#menu a,
+#menu a:visited{
+    padding: .2rem;
+    display: block;
     color: #fff;
     font-weight: 500;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    display: block;
     position: relative;      
 }
 
-header .header-content .main-nav a::after {
+#menu a::after {
     content: "";
     background: white;
     mix-blend-mode: exclusion;
@@ -71,8 +94,77 @@ header .header-content .main-nav a::after {
     transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-header .header-content .main-nav a:hover::after {
+#menu a:hover::after {
     height: calc(100% + 6px)
+}
+
+@media (max-width: 600px) {
+
+    #header {
+        justify-content: space-between;
+    }
+
+    #header > a {
+        padding: 1rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        left: 0;
+        height: 0px;
+        background-color: var(--pri-bg-color);
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #nav.active #menu {
+        height: calc(100vh - 90px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    #menu a {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #menu a:active {
+        background-color: darkgoldenrod;
+    }
+
+    #menu a::after {
+        content: unset;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 15px;
+    }
+
+    @keyframes menu {
+        from {
+            transform: rotate(0);
+        }
+        
+        to {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 /* /+HEADER */
@@ -93,6 +185,7 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 90px;
     display: flex;
     background-color: var(--sec-bg-color);
     padding: 1.5rem;
