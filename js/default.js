@@ -12,9 +12,9 @@ function headerNoDOM() {
                 <i class="fas fa-bars fa-lg"></i>
             </button>
             <ul id="menu" role="menu">
-                <li><a href="/projetos.html" data-path="/projetos.html">Projetos</a></li>
-                <li><a href="/sobre-mim.html" data-path="/sobre-mim.html">Sobre mim</a></li>
-                <li><a href="/contato.html" data-path="/contato.html">Contate-me</a></li>
+                <li><a class="link link--metis" href="/projetos.html" data-path="/projetos.html">Projetos</a></li>
+                <li><a class="link link--metis" href="/sobre-mim.html" data-path="/sobre-mim.html">Sobre mim</a></li>
+                <li><a class="link link--metis" href="/contato.html" data-path="/contato.html">Contate-me</a></li>
             </ul>
         </nav>`
     
