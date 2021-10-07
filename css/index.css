@@ -186,14 +186,14 @@ main {
     will-change: transform, opacity;
 }
 
-#projects > div.is-visible {
+#projects  > div.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 #projects > div > div:first-child {
     position: relative;
-    height: calc(10.5rem + 2px);
+    height: calc(9rem + 2px);
     align-self: center;
     background-color: var(--bg-color);
     border: 1px solid #333333;
@@ -203,26 +203,23 @@ main {
 
 #projects > div img {
     width: 100%;
-    height: 10.5rem;
+    height: 9rem;
     object-fit: cover;
-    transition: .3s ease-in-out;
-}
-
-/* ONLY COMPUTER */
-#projects > div img:hover {
-    transform: scale(1.2) translateY(13px);
-    filter: blur(1px);
 }
 
 #projects > div > div:last-child {
     width: 95%;
 }
 
-#projects > div > div:last-child h3 {
-    margin-bottom: 1rem;
+#projects > div > div:last-child a {
+    display: flex;
+    gap: .5rem;
+    align-items: baseline;
+    color: var(--text-color);
 }
 
 #projects > div > div:last-child p {
+    margin-top: 1rem;
     color: var(--text-color2);
 }
 

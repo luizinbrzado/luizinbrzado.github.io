@@ -15,6 +15,7 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
+    border-style: none;
 }
 
 /* +HEADER */
