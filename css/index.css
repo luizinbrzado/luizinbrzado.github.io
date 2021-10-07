@@ -17,13 +17,13 @@ main {
     padding: 5rem 0;
 }
 
-.presentation {
+#presentation {
     width: 100%;
     padding: 1rem;
     margin: 1rem 0;
 }
 
-.presentation .presentation-title {
+#presentation .presentation-title {
     margin-bottom: 2rem;
     transform: translateX(-40px);
     opacity: 0;
@@ -32,31 +32,31 @@ main {
     will-change: transform, opacity;
 }
 
-.presentation .presentation-title.is-visible {
+#presentation .presentation-title.is-visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-.presentation h1 {
+#presentation h1 {
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-.presentation h3 {
+#presentation h3 {
     font-weight: 500;
     color: var(--text-color2);
 }
 
-.presentation h1,
-.presentation h3 {
+#presentation h1,
+#presentation h3 {
     font-family: 'Segoe UI', sans-serif;
 }
 
-.presentation .presentation-title span {
+#presentation .presentation-title span {
     color: rgba(0, 223, 94, 0.85);
 }
 
-.presentation .presentation-buttons {
+#presentation .presentation-buttons {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -70,12 +70,12 @@ main {
     will-change: transform, opacity;
 }
 
-.presentation .presentation-buttons.is-visible {
+#presentation .presentation-buttons.is-visible {
     transform: translateX(0);
     opacity: 1;
 }
 
-.presentation .presentation-buttons a {
+#presentation .presentation-buttons a {
     text-align: center;
     width: 12rem;
     height: 2.3rem;
@@ -87,23 +87,23 @@ main {
     gap: 1rem;
 }
 
-.presentation .presentation-buttons a:visited,
-.presentation .presentation-buttons a:link {
+#presentation .presentation-buttons a:visited,
+#presentation .presentation-buttons a:link {
     color: var(--bg-color);
     font-weight: bold;
 }
 
-.presentation .presentation-buttons a:hover,
-.presentation .presentation-buttons a:active {
+#presentation .presentation-buttons a:hover,
+#presentation .presentation-buttons a:active {
     background-color: rgba(0, 223, 94, 0.8);
 }
 
 
-.presentation .presentation-img img {
+#presentation .presentation-img img {
     width: 100%;
 }
 
-.about-me {
+#about-me {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -111,27 +111,27 @@ main {
     padding: 4rem 1rem;
 }
 
-.about-me h1 {
+#about-me h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.about-me p {
+#about-me p {
     color: var(--text-color2);
 }
 
-.about-me p span {
+#about-me p span {
     color: var(--contrast-color);
 }
 
-.about-me .contacts {
+#about-me #contacts {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
 }
 
-.about-me .contacts > div {
+#about-me #contacts > div {
     transform: translateY(40px);
     opacity: 0;
     transition: transform 2s .25s cubic-bezier(0,1,.3,1),
@@ -139,13 +139,13 @@ main {
     will-change: transform, opacity;
 }
 
-.about-me .contacts > div.is-visible {
+#about-me #contacts > div.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 
-.about-me .contacts > div i {
+#about-me #contacts > div i {
     background-color: var(--bg-color2);
     padding: .6rem;
     border-radius: 50%;
@@ -154,12 +154,12 @@ main {
     margin-bottom: .6rem;
 }
 
-.about-me .contacts > div h3 {
+#about-me #contacts > div h3 {
     margin-bottom: .5rem;
 }
 
-.about-me .contacts > div p,
-.about-me .contacts > div a {
+#about-me #contacts > div p,
+#about-me #contacts > div a {
     color: var(--text-color2);
     padding: .6rem;
 }
