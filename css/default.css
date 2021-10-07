@@ -1,13 +1,10 @@
 :root {
-    --pri-bg-color: #121214;
-    --sec-bg-color: #202225;
-    --terc-bg-color: #393c43;
-    --color1: #36393f;
-    --color2: #2f3136;
-    --color-destaque: #2A9D8F;
-    --color-destaque2: #E9C46A;
-    --color-destaque3: #F4A261;
-    --color-destaque4: #E76F51;
+    --bg-color: #171717;
+    --bg-color2: #202225;
+    --bg-color3: #393c43;
+    --text-color: #F9F9F9;
+    --text-color2: #828282;
+    --contrast-color: #00DF5E;
 }
 
 * {
@@ -16,6 +13,7 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
     scroll-behavior: smooth;
 }
 
@@ -45,24 +43,24 @@ body {
 }
 
 #header > a {
-    color: #5ff;
+    color: var(--text-color);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
 }
 
 #header > a span:first-child {
-    color: #5f5;
+    color: #5F5;
 }
 
 #header > a span:last-child {
-    color: #ff5;
+    color: #FF5;
 }
 
 #btn-mobile {
     display: none;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     background-color: transparent;
 }
 
@@ -76,7 +74,7 @@ body {
 #menu a:visited{
     padding: .2rem;
     display: block;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 500;
     text-decoration: none;     
 }
@@ -121,7 +119,7 @@ body {
         top: 90px;
         left: 0;
         height: 0px;
-        background-color: var(--pri-bg-color);
+        background-color: var(--bg-color);
         transition: .6s;
         visibility: hidden;
         overflow-y: hidden;
@@ -140,10 +138,6 @@ body {
     #menu a {
         margin-top: 1rem;
         padding: 0.5rem 1rem;
-    }
-
-    #menu a:active {
-        background-color: darkgoldenrod;
     }
 
     #menu a::after {
@@ -171,7 +165,7 @@ body {
 
 body {
     color: #fff;
-    background-color: var(--pri-bg-color);
+    background-color: var(--bg-color);
 }
 
 main {
@@ -188,7 +182,7 @@ footer {
     width: 100%;
     height: 90px;
     display: flex;
-    background-color: var(--sec-bg-color);
+    background-color: var(--bg-color2);
     padding: 1.5rem;
     text-align: center;
     justify-content: center;
@@ -205,7 +199,7 @@ footer a:link:visited {
 footer p a:link,
 footer p a:visited,
 footer p a:link:visited {
-    color: var(--color-destaque3);
+    color: var(--contrast-color);
     text-decoration: none;
     border-bottom: 2px solid transparent;
 }

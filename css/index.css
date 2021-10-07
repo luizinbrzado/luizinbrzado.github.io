@@ -1,18 +1,15 @@
 :root {
-    --pri-bg-color: #121214;
-    --sec-bg-color: #202225;
-    --terc-bg-color: #393c43;
-    --color1: #36393f;
-    --color2: #2f3136;
-    --color-destaque: #2A9D8F;
-    --color-destaque2: #E9C46A;
-    --color-destaque3: #F4A261;
-    --color-destaque4: #E76F51;
+    --bg-color: #171717;
+    --bg-color2: #202225;
+    --bg-color3: #393c43;
+    --text-color: #F9F9F9;
+    --text-color2: #828282;
+    --contrast-color: #00DF5E;
 }
 
 body {
     color: #fff;
-    background-color: var(--pri-bg-color);
+    background-color: var(--bg-color);
 }
 
 main {
@@ -20,20 +17,115 @@ main {
     padding: 5rem 0;
 }
 
+.partition {
+    margin-bottom: 2rem;
+    box-shadow: inset 0px -60px 30px -25px rgba(23,23,23,1);
+}
+
 .presentation {
     width: 100%;
-    text-align: center;
-    padding: 5rem;
+    padding: 1rem;
     margin: 3rem 0;
 }
 
+.presentation .presentation-title {
+    margin-bottom: 2rem;
+}
+
+.presentation h1 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.presentation h3 {
+    font-weight: 500;
+    color: var(--text-color2);
+}
+
 .presentation h1,
-.presentation h2 {
+.presentation h3 {
     font-family: 'Segoe UI', sans-serif;
 }
 
-.presentation h2 {
-    margin: 2rem 0 0 0;
+.presentation .presentation-title span {
+    color: rgba(0, 223, 94, 0.85);
+}
+
+.presentation .presentation-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+
+.presentation .presentation-buttons a {
+    text-align: center;
+    width: 12rem;
+    height: 2.3rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: var(--contrast-color);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.presentation .presentation-buttons a:visited,
+.presentation .presentation-buttons a:link {
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+.presentation .presentation-buttons a:hover,
+.presentation .presentation-buttons a:active {
+    background-color: rgba(0, 223, 94, 0.8);
+}
+
+
+.presentation .presentation-img img {
+    width: 100%;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+.about-me h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-me .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.about-me .contacts > div i {
+    background-color: var(--bg-color2);
+    padding: 0.6rem;
+    border-radius: 50%;
+    color: var(--contrast-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-me .contacts > div h3 {
+    margin-bottom: 0.5rem;
+}
+
+.about-me .contacts > div p,
+.about-me .contacts > div a {
+    color: var(--text-color2);
+    padding: 0.6rem;
 }
 
 .technologies {
@@ -42,9 +134,7 @@ main {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5rem;
-    background-color: var(--sec-bg-color);
-    border-top: 1px solid var(--color-destaque3);
+    padding: 4rem 1rem;
 }
 
 .content-technologies {
@@ -67,5 +157,5 @@ main {
 }
 
 .technologies span {
-    color: var(--color-destaque3);
+    color: var(--contrast-color);
 }
