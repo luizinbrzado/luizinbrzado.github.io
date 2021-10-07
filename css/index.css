@@ -218,6 +218,11 @@ main {
     color: var(--text-color);
 }
 
+#projects > div > div:last-child a:link,
+#projects > div > div:last-child a:visited {
+    color: var(--text-color)
+}
+
 #projects > div > div:last-child p {
     margin-top: 1rem;
     color: var(--text-color2);
