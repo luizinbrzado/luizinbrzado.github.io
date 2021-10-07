@@ -230,7 +230,6 @@ main {
 
 #skills {
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -262,8 +261,9 @@ main {
     color: var(--contrast-color);
 }
 
-#content-skills {
-    width: 400px;
+#skills li svg {
+    width: 3rem;
+    fill: var(--contrast-color);
 }
 
 #content-skills li {
