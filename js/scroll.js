@@ -9,9 +9,12 @@ function loop() {
     elementToShow.forEach(element => {
         if (isElementInViewport(element)) {
             element.classList.add('is-visible')
-        } else {
-            element.classList.remove('is-visible')
-        }
+        } else if (element.classList.contains('is-visible')) {
+            return;
+        } 
+        // else {
+        //     element.classList.remove('is-visible')
+        // }
     });
 
     scroll(loop);
