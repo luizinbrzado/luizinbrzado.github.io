@@ -241,7 +241,7 @@ main {
     gap: 1.5rem;
 }
 
-#content-projects > div {
+#content-projects > .link-project {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -256,12 +256,12 @@ main {
     will-change: transform, opacity;
 }
 
-#content-projects > div.is-visible {
+#content-projects > .link-project.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-#content-projects > div > div:first-child {
+#content-projects .projects-img {
     height: calc(9rem + 2px);
     align-self: center;
     background-color: var(--bg-color);
@@ -270,33 +270,25 @@ main {
     overflow: hidden;
 }
 
-#content-projects > div img {
+#content-projects .projects-img img {
     width: 16rem;
     height: 9rem;
     object-fit: cover;
 }
 
-#content-projects > div > div:last-child {
+#content-projects .projects-text {
     width: 95%;
 }
 
-#content-projects > div > div:last-child a {
+#content-projects .projects-text h3 {
     display: flex;
+    font-size: 1.1rem;
     gap: .5rem;
     align-items: baseline;
     color: var(--text-color);
 }
 
-#content-projects > div > div:last-child a:link,
-#content-projects > div > div:last-child a:visited {
-    color: var(--text-color)
-}
-
-#content-projects > div > div:last-child a:hover {
-    color: rgba(249, 249, 249, .8);
-}
-
-#content-projects > div > div:last-child p {
+#content-projects .projects-text p {
     margin-top: 1rem;
     color: var(--text-color2);
 }
