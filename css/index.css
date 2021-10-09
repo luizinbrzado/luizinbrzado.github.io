@@ -114,7 +114,7 @@ main {
 }
 
 #presentation .presentation-buttons a:last-child:hover {
-    color: var(--text-color);
+    color: rgba(249, 249, 249, .8);
     font-weight: 400;
 }
 

@@ -170,6 +170,22 @@ main {
     min-height: 100vh;
 }
 
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: #828282;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #A1A1A1;
+}
+::-webkit-scrollbar-track{
+    background: #393C43;
+    border: 2px solid #171717;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
 
 /* +FOOTER */
 
